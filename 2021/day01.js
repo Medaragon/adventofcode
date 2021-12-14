@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fileReader = require('../file-reader.js')
 
 var testInput = [
   199,
@@ -13,7 +13,7 @@ var testInput = [
   263,
 ]
 
-var myInput = fs.readFileSync('./day01-data.txt').toString().split('\r\n').map(x => Number(x))
+var myInput = fileReader.readFile('./2021/day01-data.txt').map(x => Number(x))
 console.log(myInput)
 
 const puzzle1 = (input) => {

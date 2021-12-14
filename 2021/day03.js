@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fileReader = require('../file-reader.js')
 
 var testInput = [
   '00100',
@@ -15,7 +15,7 @@ var testInput = [
   '01010',
 ]
 
-var myInput = fs.readFileSync('./day03-data.txt').toString().split('\r\n')
+var myInput = fileReader.readFile('./2021/day03-data.txt')
 console.log(myInput)
 
 

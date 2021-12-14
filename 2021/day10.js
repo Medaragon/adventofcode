@@ -1,8 +1,20 @@
-const fs = require('fs')
+const fileReader = require('../file-reader.js')
 
-var myInput = fs.readFileSync('./day10-data.txt').toString().split('\r\n')
+var testInput = [
+  '[({(<(())[]>[[{[]{<()<>>',
+  '[(()[<>])]({[<{<<[]>>(',
+  '{([(<{}[<>[]}>{[]{[(<()>',
+  '(((({<>}<{<{<>}{[]{[]{}',
+  '[[<[([]))<([[{}[[()]]]',
+  '[{[{({}]{}}([{[{{{}}([]',
+  '{<[[]]>}<{[{[{[]{()[[[]',
+  '[<(<(<(<{}))><([]([]()',
+  '<{([([[(<>()){}]>(<<{{',
+  '<{([{{}}[<[[[<>{}]]]>[]]'
+]
 
-const analyzeLine = (line) => {
+var myInput = fileReader.readFile('./2021/day10-data.txt')
+
   const openedSymbolQueue = []
   var arr = line.split('')
   for (var i = 0; i < arr.length; i++) {

@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fileReader = require('../file-reader.js')
 
 var testInput = [
   'forward 5',
@@ -9,7 +9,7 @@ var testInput = [
   'forward 2'
 ]
 
-var myInput = fs.readFileSync('./day02-data.txt').toString().split('\r\n')
+var myInput = fileReader.readFile('./2021/day02-data.txt')
 console.log(myInput)
 
 const getCommandAndPosition = (singleCommand) => {
